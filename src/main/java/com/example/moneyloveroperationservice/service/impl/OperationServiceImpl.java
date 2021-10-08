@@ -8,8 +8,6 @@ import com.example.moneyloveroperationservice.service.OperationService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.AmqpTemplate;
-import org.springframework.cloud.stream.annotation.EnableBinding;
-import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
