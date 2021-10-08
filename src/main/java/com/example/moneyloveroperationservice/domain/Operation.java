@@ -1,15 +1,25 @@
 package com.example.moneyloveroperationservice.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import javax.persistence.*;
+import java.io.Serializable;
 
+@Entity
+@Table(name = "operations")
 @Data
-public class Operation {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Operation implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    Date date;
+    String date;
     Long walletId;
-    Long categoryId;
+    @OneToOne
+    Category category;
     Long operationSum;
     String note;
 }
