@@ -1,0 +1,18 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  datasource:
+    url: jdbc:postgresql://localhost:5432/money-lover-operation
+    username: postgres
+    password: root
+  application:
+    name: money-lover-operation-service
+server:
+  port: 8082
+rabbitmq:
+  exchange: operation
+  queue: operation-created-queue
+  routingkey: operation.event.created
